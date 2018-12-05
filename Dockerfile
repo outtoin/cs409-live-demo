@@ -12,6 +12,9 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 # Install necessary packages
+RUN add-apt-repository -y ppa:deadsnakes/ppa && \
+    apt-get update && \
+    apt-get install -y python3.6
 RUN apt-get update && apt-get install -y \
     build-essential \
     python3-pip

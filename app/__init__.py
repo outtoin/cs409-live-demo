@@ -16,3 +16,8 @@ toolbar = DebugToolbarExtension(app)
 
 # Import the views
 from app.views import main
+from app.views import api
+
+# Import the MLUtils
+from ml_utils import MlUtils
+mlu = MlUtils()
