@@ -13,12 +13,12 @@ from collections import defaultdict
 from keras.models import model_from_json, load_model
 from keras.preprocessing.sequence import pad_sequences
 
-from config import *
+from app.config import *
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 import matplotlib.font_manager as fm
-path = '/Library/Fonts/NanumBarunGothicLight.ttf'
+path = '/usr/share/fonts/NanumBarunGothicLight.ttf'
 font_name = fm.FontProperties(fname=path, size=50).get_name()
 print(font_name)
 plt.rc('font', family=font_name)
