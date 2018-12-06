@@ -12,17 +12,32 @@ $(document).ready(function() {
     $('#comment-form').submit(function(e) {
         console.log(1);
         e.preventDefault();
-        var url = "";
+        var url = "http://localhost:8000/api/predict";
         
-//        $.ajax({
-//            type: "POST",
-//            url: url,
-//            data: 
-//        })
+       $.ajax({
+           type: "POST",
+           url: url,
+           data: $('#textarea2').val(),
+           success: function(res) {
+               console.log(res);
+           }   
+       })
     });
     
     $('#spam-form').submit(function(e) {
         console.log(1);
         e.preventDefault();
+
+        e.preventDefault();
+        var url = "http://localhost:8000/api/top";
+        
+       $.ajax({
+           type: "GET",
+           url: url,
+           data: $('#icon_prefix2').val(),
+           success: function(res) {
+               console.log(res);
+           }   
+       })
     });
 });   
