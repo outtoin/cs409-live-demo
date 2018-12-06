@@ -9,7 +9,7 @@ mlu = MlUtils()
 def api_predict():
     text = request.form.get('text')
     print(text)
-    pred, fig = mlu.predict(text)
+    pred, fig = mlu.make_predict(text)
     return jsonify({'pred': pred, 'fig': fig})
 
 @app.route('/api/top', methods=['GET'])
