@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('#comment-form').submit(function(e) {
         console.log(1);
         e.preventDefault();
-        var url = "http://localhost:8000/api/predict";
+        var url = "http://13.125.143.82:8000/api/predict";
         
        $.ajax({
            type: "POST",
@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('#spam-form').submit(function(e) {
         console.log(1);
         e.preventDefault();
-        var url = "http://localhost:8000/api/top";
+        var url = "http://13.125.143.82:8000/api/top";
         
        $.ajax({
            type: "GET",
