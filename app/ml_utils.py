@@ -107,7 +107,7 @@ class MlUtils(object):
         
         # make tempdir
         # tmp = tempfile.mkdtemp()
-        path = os.path.join('static', 'img', 'fig1.png')
+        path = os.path.join('app', 'static', 'img', 'fig1.png')
         f.savefig(path)
         
         return res[0], path 
@@ -135,7 +135,7 @@ class MlUtils(object):
         ax.xaxis.set_ticklabels(xt)
         
         # tmp = tempfile.mkdtemp()
-        path = os.path.join('static', 'img', 'fig2.png')
+        path = os.path.join('app', 'static', 'img', 'fig2.png')
         f.savefig(path)
         
         return data, path
