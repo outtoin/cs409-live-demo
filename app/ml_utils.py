@@ -106,8 +106,8 @@ class MlUtils(object):
         ax.xaxis.set_ticklabels(token_values_after_lookup)
         
         # make tempdir
-        tmp = tempfile.mkdtemp()
-        path = os.path.join(tmp, 'fig.png')
+        # tmp = tempfile.mkdtemp()
+        path = os.path.join('static', 'img' 'fig1.png')
         f.savefig(path)
         
         return res[0], path 
@@ -134,8 +134,8 @@ class MlUtils(object):
         ax.xaxis.set_ticks(np.arange(start+1, end, 1.0))
         ax.xaxis.set_ticklabels(xt)
         
-        tmp = tempfile.mkdtemp()
-        path = os.path.join(tmp, 'top.png')
+        # tmp = tempfile.mkdtemp()
+        path = os.path.join('static', 'img' 'fig2.png')
         f.savefig(path)
         
         return data, path
