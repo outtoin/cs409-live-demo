@@ -17,7 +17,7 @@ $(document).ready(function() {
        $.ajax({
            type: "POST",
            url: url,
-           data: $('#textarea2').val(),
+           data: {'text':$('#textarea2').val()},
            success: function(res) {
                console.log(res);
            }   
@@ -27,14 +27,12 @@ $(document).ready(function() {
     $('#spam-form').submit(function(e) {
         console.log(1);
         e.preventDefault();
-
-        e.preventDefault();
         var url = "http://localhost:8000/api/top";
         
        $.ajax({
            type: "GET",
            url: url,
-           data: $('#icon_prefix2').val(),
+           data: {'num': $('#icon_prefix2').val()},
            success: function(res) {
                console.log(res);
            }   
