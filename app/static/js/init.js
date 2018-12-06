@@ -3,10 +3,12 @@ $(document).ready(function() {
     $('#nav-comment').click(function() {
         $('.analyze-comment').removeClass('hide');
         $('.spam-words').addClass('hide');
+        $('.image-getter2').addClass('hide');
     });
     $('#nav-spam').click(function() {
         $('.analyze-comment').addClass('hide');
         $('.spam-words').removeClass('hide');
+        $('.image-getter1').addClass('hide');
     });
     
     $('#comment-form').submit(function(e) {
@@ -19,7 +21,9 @@ $(document).ready(function() {
            url: url,
            data: {'text':$('#textarea2').val()},
            success: function(res) {
-               console.log(res);
+            console.log(res);
+            $('#image1').attr("src", "static/img/fig1.png");
+            $('.image-getter1').removeClass('hide');
            }   
        })
     });
