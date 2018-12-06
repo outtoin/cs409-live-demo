@@ -12,8 +12,8 @@ def api_predict():
     pred, fig = mlu.predict(text)
     return jsonify(pred)
 
-# @app.route('/api/top', methods=['GET'])
-# def api_top():
-    # num = request.args.get('num')
-    # data, path = mlu.make_top_list(num)
-    # return jsonify(data)
+@app.route('/api/top', methods=['GET'])
+def api_top():
+    num = request.args.get('num')
+    data, path = mlu.make_top_list(int(num))
+    return jsonify({'data': data, 'path':path})
