@@ -35,7 +35,8 @@ $(document).ready(function() {
            data: {'num': $('#icon_prefix2').val()},
            success: function(res) {
                console.log(res);
+               $('#image2').attr("src", res['path'])
            }   
-       })
+       });
     });
 });   
