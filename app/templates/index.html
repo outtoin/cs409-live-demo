@@ -7,8 +7,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="{{ url_for('static', 'css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{{ url_for('static', '/css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -138,7 +138,7 @@
     
     <!-- JS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script type="text/javascript" src="{{ url_for('static', 'js/materialize.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', 'js/materialize.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', 'js/init.js') }}"></script>
+	<script type="text/javascript" src="static/js/materialize.js"></script>
+	{% comment %} <script type="text/javascript" src="{{ url_for('static', 'js/materialize.js') }}"></script> {% endcomment %}
+	<script type="text/javascript" src="static/js/init.js"></script>
 </html>
