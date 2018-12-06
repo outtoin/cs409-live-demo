@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $.ajaxSetup({cache: false});
+
     $('textarea#textarea2').characterCounter();
     $('#nav-comment').click(function() {
         $('.analyze-comment').removeClass('hide');
